@@ -1,0 +1,1252 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#183946), to(#161819));
+  background-image: linear-gradient(#183946, #161819);
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-animation: animate 25s linear infinite;
+          animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 18s;
+          animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 35s;
+          animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 11s;
+          animation-duration: 11s;
+}
+
+.circles li:nth-child(11) {
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(720deg);
+            transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(720deg);
+            transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  /* Or set a fixed height */
+}
+
+/* SLIDER */
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+/* SLIDES */
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div + div {
+  visibility: hidden;
+  /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0.7;
+  text-decoration: none;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+
+.CSSgal .prevNext a + a {
+  right: 0px;
+}
+
+/* NAVIGATION */
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.3em;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.CSSgal .bullets > a {
+  color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+}
+
+.CSSgal .bullets > a {
+  background: rgba(255, 255, 255, 0.5);
+  /* Dim all but first */
+}
+
+/* ACTIVE NAVIGATION ANCHOR */
+.CSSgal > s:target ~ .bullets > * {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#s1:target ~ .bullets > *:nth-child(1) {
+  background: #03c2c2;
+}
+
+#s2:target ~ .bullets > *:nth-child(2) {
+  background: #03c2c2;
+}
+
+#s3:target ~ .bullets > *:nth-child(3) {
+  background: #03c2c2;
+}
+
+#s4:target ~ .bullets > *:nth-child(4) {
+  background: #03c2c2;
+}
+
+i {
+  font-size: 1.5em;
+  color: black;
+}
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+.CSSgal > s:target ~ .prevNext > * {
+  visibility: hidden;
+}
+
+#s1:target ~ .prevNext > *:nth-child(1) {
+  visibility: visible;
+}
+
+#s2:target ~ .prevNext > *:nth-child(2) {
+  visibility: visible;
+}
+
+#s3:target ~ .prevNext > *:nth-child(3) {
+  visibility: visible;
+}
+
+#s4:target ~ .prevNext > *:nth-child(4) {
+  visibility: visible;
+}
+
+/* SLIDER ANIMATION POSITIONS */
+#s1:target ~ .slider {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+}
+
+#s2:target ~ .slider {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+#s3:target ~ .slider {
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+}
+
+#s4:target ~ .slider {
+  transform: translateX(-300%);
+  -webkit-transform: translateX(-300%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Home {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.Home hr {
+  width: 600px;
+  background-color: #03c2c2;
+  height: 2px;
+  border: none;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+.Home ul {
+  cursor: default;
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+  -webkit-box-ordinal-group: initial;
+      -ms-flex-order: initial;
+          order: initial;
+}
+
+.Home ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Home ul li h1 {
+  font-size: 3.5em;
+  height: 1em;
+  letter-spacing: 3px;
+}
+
+.Home ul li .Title-letter:hover {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+  color: #03c259;
+}
+
+.Home ul li .Title-letter.animated {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+}
+
+.Home ul li h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+
+.Home p {
+  cursor: default;
+  width: 580px;
+  font-size: 18px;
+  margin: 30px 0;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+.Skills {
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Skills .Skills-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  cursor: default;
+}
+
+.Skills .Skills-title h1 {
+  font-size: 3em;
+  height: 1em;
+  letter-spacing: 3px;
+}
+
+.Skills .Skills-title .Title-letter:hover {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+  color: #03c2c2;
+}
+
+.Skills .Skills-title .Title-letter.animated {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+}
+
+.Skills .Skills-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.Skills .Skills-wrapper {
+  overflow-y: scroll;
+  height: 420px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 15px;
+}
+
+.Skills .Skills-wrapper .Skill {
+  width: 250px;
+  height: 139px;
+  border-bottom: 2px solid #03c2c2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Skills .Skills-wrapper .Skill i {
+  font-size: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Skills .Skills-wrapper .Skill p {
+  cursor: default;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Projects {
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Projects .Projects-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  cursor: default;
+}
+
+.Projects .Projects-title h1 {
+  font-size: 3em;
+  height: 1em;
+  letter-spacing: 3px;
+}
+
+.Projects .Projects-title .Title-letter:hover {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+  color: #03c2c2;
+}
+
+.Projects .Projects-title .Title-letter.animated {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+}
+
+.Projects .Projects-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.Projects .Projects-wrapper {
+  overflow-y: scroll;
+  height: 420px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 15px;
+}
+
+.Projects .Projects-wrapper a {
+  display: block;
+  width: 250px;
+  height: 129px;
+  background-color: black;
+  margin-bottom: 13px;
+}
+
+.Projects .Projects-wrapper a img {
+  width: 250px;
+  height: 129px;
+}
+
+.Contact {
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Contact .Contact-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-65px);
+          transform: translateY(-65px);
+  cursor: default;
+}
+
+.Contact .Contact-title h1 {
+  font-size: 3em;
+  height: 1em;
+  letter-spacing: 3px;
+}
+
+.Contact .Contact-title .Title-letter:hover {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+  color: #03c2c2;
+}
+
+.Contact .Contact-title .Title-letter.animated {
+  -webkit-animation: example 1.3s;
+          animation: example 1.3s;
+}
+
+.Contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Contact form label {
+  font-size: 16px;
+}
+
+.Contact form label input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.Contact form label :hover {
+  outline: none;
+  background-color: #cccaca;
+}
+
+.Contact form label :focus {
+  background-color: #cccaca;
+}
+
+.Contact form label ::-webkit-input-placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+}
+
+.Contact form label :-ms-input-placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+}
+
+.Contact form label ::-ms-input-placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+}
+
+.Contact form label ::placeholder {
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+}
+
+.Contact form :focus {
+  outline: none;
+}
+
+.Contact form button {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: #03c2c2;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 360px) {
+  .Home hr {
+    width: 320px;
+  }
+  .Home p {
+    width: 280px;
+    font-size: 17px;
+    margin: 30px 0;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .Home ul li h1 {
+    font-size: 3em;
+  }
+  .Home ul li h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+  .Home {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  .Home hr {
+    width: 300px;
+    background-color: #03c2c2;
+    height: 3px;
+    border: none;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .Home ul {
+    cursor: default;
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+  .Home ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Home ul li h1 {
+    font-size: 4em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Home ul li .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Home ul li .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Home ul li h2 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    letter-spacing: 3px;
+  }
+  .Home p {
+    width: 500px;
+    font-size: 24px;
+    margin: 30px 0;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .CSSgal .bullets a {
+    width: 60px;
+    height: 60px;
+  }
+  .CSSgal .prevNext a {
+    width: 60px;
+    height: 60px;
+  }
+  i {
+    font-size: 2.3em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Skills {
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Skills .Skills-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    cursor: default;
+  }
+  .Skills .Skills-title h1 {
+    font-size: 3.5em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Skills .Skills-title .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Skills .Skills-title .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Skills .Skills-wrapper {
+    overflow-y: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    width: 600px;
+    height: 420px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .Skills .Skills-wrapper .Skill {
+    width: 300px;
+    height: 139px;
+    border-bottom: 2px solid #03c2c2;
+    border: 0;
+    padding-left: 30px;
+  }
+  .Skills .Skills-wrapper .Skill i {
+    font-size: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Skills .Skills-wrapper .Skill p {
+    cursor: default;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Skills .Scroll-down {
+    position: absolute;
+    bottom: 21%;
+    right: -105%;
+    visibility: hidden;
+  }
+  .Skills .Scroll-down p {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 1.1em;
+  }
+  .Home {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  .Home hr {
+    width: 500px;
+    background-color: #03c2c2;
+    height: 3px;
+    border: none;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .Home ul {
+    cursor: default;
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+  .Home ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Home ul li h1 {
+    font-size: 3.3em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Home ul li .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Home ul li .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Home ul li h2 {
+    font-size: 1.8em;
+    margin-top: 10px;
+    letter-spacing: 3px;
+  }
+  .Home p {
+    width: 450px;
+    font-size: 17px;
+    margin: 30px 0;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .Projects {
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .Projects .Projects-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    cursor: default;
+  }
+  .Projects .Projects-title h1 {
+    font-size: 3.5em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Projects .Projects-title .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Projects .Projects-title .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Projects .Projects-wrapper {
+    overflow-y: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    width: 600px;
+    height: 420px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .Projects .Projects-wrapper .Skill {
+    width: 300px;
+    height: 139px;
+    border-bottom: 2px solid #03c2c2;
+    border: 0;
+    padding-left: 30px;
+  }
+  .Contact {
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .Contact .Contact-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    cursor: default;
+  }
+  .Contact .Contact-title h1 {
+    font-size: 3.5em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Contact .Contact-title .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Contact .Contact-title .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Contact form button {
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, white), color-stop(50%, #03c2c2)) right;
+    background: linear-gradient(to left, white 50%, #03c2c2 50%) right;
+    background-size: 200%;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+  }
+  .Contact form button:hover {
+    background-position: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Home {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  .Home hr {
+    width: 50vw;
+    background-color: #03c2c2;
+    height: 3px;
+    border: none;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .Home ul {
+    cursor: default;
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+  .Home ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Home ul li h1 {
+    font-size: 3.5em;
+    height: 1em;
+    letter-spacing: 3px;
+  }
+  .Home ul li .Title-letter:hover {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+    color: #03c2c2;
+  }
+  .Home ul li .Title-letter.animated {
+    -webkit-animation: example 1.3s;
+            animation: example 1.3s;
+  }
+  .Home ul li h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    letter-spacing: 3px;
+  }
+  .Home p {
+    width: 580px;
+    font-size: 18px;
+    margin: 30px 0;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
+@-webkit-keyframes example {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+    color: #03c2c2;
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-25px);
+            transform: scale(0.9, 1.1) translateY(-25px);
+    color: #03c2a2;
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+    color: #03c289;
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(-7px);
+            transform: scale(1, 1) translateY(-7px);
+    color: #03c269;
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+    color: #03c259;
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes example {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+    color: #03c2c2;
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-25px);
+            transform: scale(0.9, 1.1) translateY(-25px);
+    color: #03c2a2;
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+    color: #03c289;
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(-7px);
+            transform: scale(1, 1) translateY(-7px);
+    color: #03c269;
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+    color: #03c259;
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
